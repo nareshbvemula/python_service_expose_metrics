@@ -11,6 +11,7 @@ Clone this repository to the machine where you would like to build and deploy
 
 ```bash
 $ git clone https://github.com/nareshbvemula/python_service_expose_metrics.git
+cd python_service_expose_metrics
 ```
 ## Contents 
 * src/app.py - A python flask Application to expose custom prometheus metrics
@@ -22,7 +23,7 @@ $ git clone https://github.com/nareshbvemula/python_service_expose_metrics.git
 ## Procedure
 Build docker image of the application
 ```bash
-docker build -t metrics -f Dockerfile
+docker build -t metrics .
 ```
 Tag this docker image with full name of your Docker hub/repository
 ```bash
