@@ -17,8 +17,8 @@ cd python_service_expose_metrics
 * src/app.py - A python flask Application to expose custom prometheus metrics
 * requirements.txt - Contains the list of moduled to be installed docker container
 * Dockerfile - Docker file to build the application 
-* deployment.yml - kubernetes deployment file, used to create a deployment in kubernetes
-* service.yml - kubernetes service file, to expose application port on to the Node
+* k8s/deployment.yml - kubernetes deployment file, used to create a deployment in kubernetes
+* k8s/service.yml - kubernetes service file, to expose application port on to the Node
 
 ## Procedure
 Build docker image of the application
@@ -39,7 +39,7 @@ docker push nareshvemula/python-flask
 Deploy in kubernetes Cluster
 Note: If the name of the Docker image is different , do please update in this file under "image: <Name of the docker image>"
 ```bash
-kubectl apply -f deployment.yml
+kubectl apply -f k8s/deployment.yml
 ```
 Verify if the pod is up and runnning 
 ```bash
@@ -56,7 +56,7 @@ kube-system   kube-scheduler-ip-172-31-20-181               1/1     Running   0 
 ```
 Create a kubernetes service to expose port on to the Node
 ```bash
-kubectl apply -f service.yml 
+kubectl apply -f k8s/service.yml 
 ```
 ## Verify
 Access the URL to view the custom metrics
