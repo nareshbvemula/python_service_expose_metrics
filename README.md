@@ -1,5 +1,6 @@
 # Python Service to Expose Custom Metrics
 Custom Python application designed to run on a Kubernetes Cluster to monitor an internet url and provide prometheus metrics.
+
 Assumptioms:
   Internlly the service runs on port 5000
   Port 5000 is mapped to 30000 through kubernetes service
