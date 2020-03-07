@@ -1,5 +1,9 @@
 # Python Service to Expose Custom Metrics
 Custom Python application designed to run on a Kubernetes Cluster to monitor an internet url and provide prometheus metrics.
+Assumptioms:
+  Internlly the service runs on port 5000
+  Port 5000 is mapped to 30000 through kubernetes service
+  Port 30000 should be enabled in the firewall (if any) to access the application URL
 
 # How to build and deploy
 Clone this repository to the machine where you would like to build and deploy
@@ -51,5 +55,10 @@ kube-system   kube-scheduler-ip-172-31-20-181               1/1     Running   0 
 Create a kubernetes service to expose port on to the Node
 ```bash
 kubectl apply -f service.yml 
+```
+## Verify
+Access the URL to view the custom metrics
+```bash
+  http://<HOST IP>:30000/metrics
 ```
 
