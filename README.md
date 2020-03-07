@@ -63,4 +63,6 @@ Access the URL to view the custom metrics
 ```bash
   http://<HOST IP>:30000/metrics
 ```
+ ![ScreenShot](https://github.com/nareshbvemula/python_service_expose_metrics/blob/master/docs/Metrics_in_Prometheus.JPG?raw=true&sanitize=true "Metrics view from Prometheus")
+![ScreenShot](https://github.com/nareshbvemula/python_service_expose_metrics/blob/master/docs/Metrics_From_App.JPG?raw=true&sanitize=true "Metric view from App")
   
