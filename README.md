@@ -67,4 +67,13 @@ Access the URL to view the custom metrics
 ![ScreenShot](https://github.com/nareshbvemula/python_service_expose_metrics/blob/master/docs/Metrics_in_Prometheus.JPG?raw=true&sanitize=true)
 ## Metric view from App
 ![ScreenShot](https://github.com/nareshbvemula/python_service_expose_metrics/blob/master/docs/Metrics_From_App.JPG?raw=true&sanitize=true)
-  
+ 
+ ## Unit Tests
+ To run the unit tests exexute the below command
+ 
+ Note: Please install unittest package if not available by default
+
+ ```bash
+  python -m unittest tests/test_app.py
+```
+
