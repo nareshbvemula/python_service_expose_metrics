@@ -19,6 +19,7 @@ cd python_service_expose_metrics
 * Dockerfile - Docker file to build the application 
 * k8s/deployment.yml - kubernetes deployment file, used to create a deployment in kubernetes
 * k8s/service.yml - kubernetes service file, to expose application port on to the Node
+* tests/test_app.py - unittest for the flask application
 
 ## Procedure
 Build docker image of the application
